@@ -1,0 +1,486 @@
+@charset "UTF-8";
+/* Kolory */
+/* Zmieniony na odcień niebieskiego */ /* Resetowanie stylów */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Calibri, Verdana, Tahoma, Helvetica, sans-serif;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.logo {
+  display: flex;
+  max-width: 40%;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 2em 0 2em;
+}
+
+.section-container {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  max-width: 1400px;
+}
+
+h2 {
+  color: #faad26;
+  padding: 2em 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  padding-top: 1em;
+  color: #4481eb;
+}
+
+p {
+  text-align: center;
+  font-size: 2.2rem;
+  padding: 1.2em 0;
+  margin: 0.5em 1em;
+}
+
+/*Wysoki kontrast */
+.high-contrast {
+  background-image: none;
+  background-color: black;
+  color: white;
+}
+
+/* Sekcja wyszukiwarki */
+.search-box {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: 4em;
+  padding: 0em 0.5em;
+  margin: auto;
+  background-color: white;
+  z-index: 1000;
+}
+.search-box .search-field {
+  width: 70%;
+  font-size: 1.4em;
+  background: none;
+  border: 1px dashed black;
+  border-right: none;
+}
+.search-box .search {
+  width: 3em;
+  height: 2.85em;
+  border: 1px dashed black;
+  background-color: black;
+  font-size: 1.4em;
+  color: white;
+  transition: border 0.5s;
+}
+.search-box .search:hover {
+  background-color: #faad26;
+  transition: 0.3s;
+  border: none;
+}
+.search-box .accessibility {
+  display: flex;
+  margin-left: auto;
+  padding: 0 1em;
+}
+.search-box .accessibility button {
+  width: 2.2em;
+  height: 2.2em;
+  border: 1px dashed black;
+  font-size: 1.6em;
+  border-radius: 50%;
+  background: none;
+  margin-left: 0.5em;
+  transition: border 0.3s;
+}
+.search-box .accessibility button:hover {
+  border: 1px solid black;
+  color: #faad26;
+}
+
+/* wyszukanie podswietlonego tekstu */
+.highlight {
+  background-color: yellow; /* Może być opcjonalnie */
+  text-decoration: underline; /* To jest ważne, aby podkreślić tekst */
+  font-weight: bold; /* Opcjonalne pogrubienie tekstu */
+  color: black;
+}
+
+/* Nawigacja */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+} /* Kontener na przyciski menu mobilnego */
+.mobile {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center; /* Wyrównanie ikony burgera i logo */
+} /* Ikona burgera */
+.burger-btn {
+  cursor: pointer;
+  color: black;
+  font-size: 2.5em; /* Zwiększyłem rozmiar ikony burgera */
+  padding: 0em 0em 0.1em 0;
+  display: block;
+  margin-left: auto;
+} /* Menu rozwijane - ukryte domyślnie */
+.down-navigation {
+  display: none; /* Menu jest ukryte domyślnie */
+  position: absolute;
+  top: 0;
+  right: 0; /* Ustawienie menu po prawej stronie */
+  background-color: white; /* Tło menu - białe */
+  width: 100vw; /* Szerokość menu */
+  height: 100vh; /* Wysokość menu, rozciąga się na całą wysokość ekranu */
+  padding-top: 2em;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1); /* Cień po lewej stronie */
+  transform: translateX(100%); /* Menu zaczyna poza ekranem po prawej stronie */
+  text-transform: uppercase;
+}
+
+.down-navigation.active {
+  display: block; /* Pokazuje menu po kliknięciu */
+  transform: translateX(0); /* Menu wysuwa się z prawej strony */
+} /* Przycisk zamykający menu */
+.close-btn {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 3rem;
+  cursor: pointer;
+  color: black; /* Kolor przycisku */
+  z-index: 1001; /* Nadpisuje inne elementy w menu */
+}
+
+.close-btn:hover {
+  color: #faad26; /* Zmiana koloru przycisku przy najechaniu */
+} /* Lista elementów w menu */
+.down-navigation ul {
+  list-style-type: none;
+  padding-top: 8em;
+  margin: 0;
+  text-align: center;
+}
+
+.down-navigation li {
+  padding: 1.2em;
+  font-size: 2rem;
+}
+
+.down-navigation li a {
+  color: black; /* Czarny tekst */
+  text-decoration: none;
+}
+
+.down-navigation li a:hover {
+  text-decoration: underline;
+}
+
+/* Nawigacja desktopowa */
+.desktop-nav {
+  display: none;
+}
+.desktop-nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2em;
+  padding-right: 3em;
+}
+.desktop-nav li a {
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: -webkit-text-decoration 3s;
+  transition: text-decoration 3s;
+  transition: text-decoration 3s, -webkit-text-decoration 3s;
+}
+.desktop-nav li a:hover {
+  text-decoration: underline;
+}
+
+/* Przyciski odpowiadające za zwiększenie czcionki oraz zmianę kontrastu */
+.above-navigation button {
+  display: flex;
+  align-items: top;
+  padding: 0.5em 0.8em;
+  background-color: white;
+  border: 0px;
+  font-size: 1.4em;
+  color: rgba(0, 0, 0, 0.5);
+}
+.above-navigation button:hover {
+  color: #faad26;
+  transition: 0.2s;
+}
+
+/* Sekcja o nas */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 1em;
+}
+.container .image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+.container .image img {
+  width: 40%;
+}
+.container .about-us {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+.container .about-us .describe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Sekcja osiągnięcia */
+.achieve {
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+.achieve h2 {
+  color: white;
+}
+.achieve h3 {
+  color: #faad26;
+}
+.achieve .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em 1em;
+  color: white;
+}
+.achieve .container .box {
+  padding: 2em 0;
+  align-items: center;
+}
+.achieve .container .describe {
+  display: flex;
+  flex-direction: column;
+}
+.achieve .container .describe .btn-more {
+  align-self: center;
+  width: 40%;
+  margin-bottom: 1em;
+  padding: 0.5em 0.1em;
+  font-size: 1.4rem;
+}
+.achieve .container .describe .long-text {
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Sekcja galerii */
+.gallery {
+  padding-bottom: 2em;
+  background-color: #111;
+}
+.gallery .gallery-box {
+  width: 90%;
+  margin: auto;
+}
+.gallery .gallery-box a {
+  display: inline-block;
+  margin: 10px;
+}
+.gallery .gallery-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: filter 0.3s ease;
+}
+.gallery .gallery-box img:hover {
+  filter: brightness(70%);
+}
+
+.fancybox-caption {
+  text-align: center;
+  font-size: 2.2rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 1em;
+}
+
+/*Kontakt*/
+footer {
+  display: flex;
+  padding: 5em 0;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  flex-direction: column;
+}
+footer .container {
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+}
+footer .container .foot-box-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+footer .container .foot-box-left .box {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.2em 0;
+}
+footer .container .foot-box-left .box label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.5em 0;
+  color: white;
+}
+footer .container .foot-box-left .box input {
+  width: 100%;
+  padding: 0.5em 2em;
+}
+footer .container .foot-box-right {
+  text-align: center;
+}
+footer .container .foot-box-right h3 {
+  color: #faad26;
+}
+footer .container .foot-box-right p {
+  font-size: 2rem;
+  padding: 0em;
+  text-align: center;
+  text-transform: uppercase;
+}
+footer .container .foot-box-right span {
+  padding: 0 0.5em;
+}
+footer .container .btn-send {
+  display: flex;
+  font-size: 1.4rem;
+  padding: 0.2em 3em;
+  margin: 0 auto;
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+footer .container a {
+  padding: 0 0.3em;
+  font-size: 3rem;
+  color: #4481eb;
+  transition: color 0.3s ease;
+}
+footer .container a:hover {
+  color: #faad26;
+}
+footer .copy {
+  background-color: #faad26;
+  color: black;
+  text-align: center;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  display: none; /* Przyciski są ukryte, dopóki użytkownik nie przewinie w dół */
+  background-color: #f1c40f; /* Kolor tła */
+  color: white; /* Kolor ikony */
+  border: none;
+  padding: 0.4em 0.8em;
+  border-radius: 10%;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+}
+
+.back-to-top:hover {
+  background-color: #e1b500;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  /* Sekcja galerii */
+}
+@media (min-width: 1024px) {
+  /* Ukryj burger button i rozwijane menu, pokaż nawigację desktopową */
+  .burger-btn,
+  .down-navigation {
+    display: none;
+  }
+  .mobile {
+    width: 50%;
+  }
+  .desktop-nav {
+    display: flex;
+  }
+  /*Sekcja o nas */
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2em 2em;
+  }
+  .container .describe {
+    width: 100%;
+  }
+  .container .p-about {
+    margin-top: 2em;
+  }
+  /*Sekcja Osiągnięcia*/
+  .achieve {
+    display: flex;
+    flex-direction: column;
+  }
+  .achieve .section-container .container .box {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .achieve .section-container .box:nth-child(odd) {
+    flex-direction: row;
+  }
+  /*Footer*/
+  footer .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=style.css.map */
