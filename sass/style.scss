@@ -19,9 +19,10 @@ body {
 .logo {
 	display: flex;
 	max-width: 40%;
+	z-index: 1000;
 }
 img {
-	width: 100%;
+	max-width: 100%;
 }
 section {
 	display: flex;
@@ -74,7 +75,8 @@ p {
 	padding: 0em 0.5em;
 	margin: auto;
 	background-color: $main-color;
-	z-index: 1000;
+	z-index: 100;
+
 	.search-field {
 		width: 70%;
 		font-size: 1.4em;
@@ -166,9 +168,11 @@ nav {
 	transform: translateX(0); /* Menu wysuwa się z prawej strony */
 } /* Przycisk zamykający menu */
 .close-btn {
-	position: absolute;
-	top: 1em;
-	right: 1em;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	padding: 0em 0em 0.1em 0;
+	margin-right: 0.7em;
 	font-size: 3rem;
 	cursor: pointer;
 	color: $second-color; /* Kolor przycisku */
@@ -202,6 +206,7 @@ nav {
 		display: flex;
 		gap: 2em;
 		padding-right: 3em;
+		padding-top: 3em;
 	}
 	li a {
 		text-transform: uppercase;
@@ -419,10 +424,19 @@ footer {
 .back-to-top:hover {
 	background-color: #e1b500;
 }
-/* Media Queries */
-@media (min-width: 768px) {
-	/* Sekcja galerii */
+
+@media (min-width: 584px) {
+	.close-btn {
+		padding-top: 0.5em;
+	}
 }
+
+@media (min-width: 811px) {
+	.close-btn {
+		padding-top: 0.9em;
+	}
+}
+/* Media Queries */
 @media (min-width: 1024px) {
 	/* Ukryj burger button i rozwijane menu, pokaż nawigację desktopową */
 	.burger-btn,
@@ -438,6 +452,9 @@ footer {
 	}
 	/*Sekcja o nas */
 	.container {
+		img {
+			max-width: 50%;
+		}
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -454,6 +471,9 @@ footer {
 
 	/*Sekcja Osiągnięcia*/
 	.achieve {
+		img {
+			max-width: 50%;
+		}
 		display: flex;
 		flex-direction: column;
 		.section-container {
