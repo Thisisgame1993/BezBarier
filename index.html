@@ -48,11 +48,6 @@
     <div class="search-box">
         <input class="search-field" type="text" placeholder=" Wyszukaj na stronie...">
         <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <div class="accessibility">
-            <button class="increase"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
-            <span class="pipe"></span>
-            <button class="contrast"><i class="fa-solid fa-circle-half-stroke"></i></button>
-        </div>
     </div>
 
     <section id="about-us" class="about-us">
@@ -176,14 +171,14 @@
         <div class="container">
             <div class="foot-box-left">
                 <div class="form">
-                    <form action="" method="POST">
+                    <form action="send_email.php" method="POST">
                         <div class="box">
                             <label for="Name">Imię</label>
-                            <input id=name type="text" name="name">
+                            <input id="name" type="text" name="name">
                         </div>
                         <div class="box">
                             <label for="Name">e-mail</label>
-                            <input id=email type="email" name="email">
+                            <input id="email" type="email" name="email">
                             <label for="Name">Treść wiadomości</label>
                         </div>
                         <div class="box">
@@ -191,6 +186,7 @@
                         </div>
                         <button class="btn-send btn btn-warning" type="submit">Wyślij wiadomość</button>
                     </form>
+
                 </div>
             </div>
             <div class="foot-box-right">
@@ -209,7 +205,19 @@
             &copy; <span id="footerYear"></span> Stowarzyszenie Bez Granic. Wszelkie Prawa Zastrzeżone
         </div>
     </footer>
-
+    <div id="accessibilityMenu">
+        <button id="accessibilityButton">
+            <i class="fa-solid fa-wheelchair"></i>
+        </button>
+        <div id="accessibilityOptions">
+            <button class="contrast" title="Wysoki kontrast">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+            <button class="increase" title="Powiększ czcionkę">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+            </button>
+        </div>
+    </div>
     <button id="backToTopBtn" class="back-to-top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>

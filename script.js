@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const searchButton = document.querySelector('.search')
 	const buttons = document.querySelectorAll('.btn-more')
 	const achieveSection = document.querySelector('.achieve')
+	const accessibilityButton = document.getElementById('accessibilityButton')
+	const accessibilityOptions = document.getElementById('accessibilityOptions')
 	const body = document.body
 	let clickCount = 0
 	let originalFontSize = {}
@@ -24,13 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	closeBtn.addEventListener('click', () => {
 		navMenu.classList.remove('active')
 	})
-	const menuLinks = navMenu.querySelectorAll('a') // Pobierz wszystkie linki w menu
 
+	const menuLinks = navMenu.querySelectorAll('a') // Pobierz wszystkie linki w menu
 	menuLinks.forEach(link => {
 		link.addEventListener('click', () => {
 			navMenu.classList.remove('active') // Zamknij menu
 		})
 	})
+
 	// Funkcja przechowująca oryginalne rozmiary czcionek
 	function storeOriginalFontSizes() {
 		const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, span, a, .btn-more')
@@ -203,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			y: 2,
 		},
 	})
+
 	// Pokazywanie przycisku po przewinięciu
 	window.onscroll = function () {
 		const btn = document.getElementById('backToTopBtn')
@@ -235,4 +239,11 @@ document.querySelector('.contrast').addEventListener('click', function () {
 
 	// Przełączanie klasy high-contrast na body
 	document.body.classList.toggle('high-contrast')
+})
+
+// Obsługuje rozwijanie opcji dostępności
+document.getElementById('accessibilityButton').addEventListener('click', function () {
+	const options = document.getElementById('accessibilityOptions')
+	// Toggle visibility of accessibility options
+	options.style.display = options.style.display === 'flex' ? 'none' : 'flex'
 })

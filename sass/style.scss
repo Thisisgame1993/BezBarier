@@ -1,7 +1,7 @@
 /* Kolory */
 $main-color: white;
 $second-color: black;
-$third-color: #faad26;
+$third-color: #f1c40f;
 $four-color: #4481eb; /* Zmieniony na odcień niebieskiego */ /* Resetowanie stylów */
 * {
 	box-sizing: border-box;
@@ -65,7 +65,10 @@ p {
 	background-color: $second-color;
 	color: $main-color;
 }
-
+/*Niezbedne do ukrywania przycisku dostępności*/
+.hidden {
+	display: none;
+}
 /* Sekcja wyszukiwarki */
 .search-box {
 	position: fixed;
@@ -117,6 +120,60 @@ p {
 			color: $third-color;
 		}
 	}
+}
+#accessibilityMenu {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 1000;
+}
+
+#accessibilityButton {
+	color: $main-color;
+	background-color: $third-color;
+	border: none;
+	border-radius: 10%;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+	font-size: 2rem;
+}
+
+#accessibilityButton:hover {
+	background-color: $four-color;
+}
+
+#accessibilityOptions {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 5em;
+	height: 10em;
+	bottom: 120%;
+	left: 0%;
+	background-color: $four-color;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#accessibilityOptions button {
+	background-color: $four-color;
+	font-size: 1.8rem;
+	border: none;
+	margin: 5px;
+	width: 2.5em;
+	height: 5em;
+	cursor: pointer;
+	color: $main-color;
+	border-radius: 5px;
+}
+
+#accessibilityOptions button:hover {
+	background-color: $third-color;
+	color: $main-color;
 }
 
 /* wyszukanie podswietlonego tekstu */

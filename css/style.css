@@ -41,7 +41,7 @@ section {
 }
 
 h2 {
-  color: #faad26;
+  color: #f1c40f;
   padding: 2em 0;
   text-transform: uppercase;
   text-align: center;
@@ -72,6 +72,11 @@ p {
   color: white;
 }
 
+/*Niezbedne do ukrywania przycisku dostępności*/
+.hidden {
+  display: none;
+}
+
 /* Sekcja wyszukiwarki */
 .search-box {
   position: fixed;
@@ -100,7 +105,7 @@ p {
   transition: border 0.5s;
 }
 .search-box .search:hover {
-  background-color: #faad26;
+  background-color: #f1c40f;
   transition: 0.3s;
   border: none;
 }
@@ -121,7 +126,62 @@ p {
 }
 .search-box .accessibility button:hover {
   border: 1px solid black;
-  color: #faad26;
+  color: #f1c40f;
+}
+
+#accessibilityMenu {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+#accessibilityButton {
+  color: white;
+  background-color: #f1c40f;
+  border: none;
+  border-radius: 10%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 2rem;
+}
+
+#accessibilityButton:hover {
+  background-color: #4481eb;
+}
+
+#accessibilityOptions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5em;
+  height: 10em;
+  bottom: 120%;
+  left: 0%;
+  background-color: #4481eb;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#accessibilityOptions button {
+  background-color: #4481eb;
+  font-size: 1.8rem;
+  border: none;
+  margin: 5px;
+  width: 2.5em;
+  height: 5em;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+
+#accessibilityOptions button:hover {
+  background-color: #f1c40f;
+  color: white;
 }
 
 /* wyszukanie podswietlonego tekstu */
@@ -187,7 +247,7 @@ nav {
 }
 
 .close-btn:hover {
-  color: #faad26; /* Zmiana koloru przycisku przy najechaniu */
+  color: #f1c40f; /* Zmiana koloru przycisku przy najechaniu */
 } /* Lista elementów w menu */
 .down-navigation ul {
   list-style-type: none;
@@ -245,7 +305,7 @@ nav {
   color: rgba(0, 0, 0, 0.5);
 }
 .above-navigation button:hover {
-  color: #faad26;
+  color: #f1c40f;
   transition: 0.2s;
 }
 
@@ -285,7 +345,7 @@ nav {
   color: white;
 }
 .achieve h3 {
-  color: #faad26;
+  color: #f1c40f;
 }
 .achieve .container {
   display: flex;
@@ -387,7 +447,7 @@ footer .container .foot-box-right {
   text-align: center;
 }
 footer .container .foot-box-right h3 {
-  color: #faad26;
+  color: #f1c40f;
 }
 footer .container .foot-box-right p {
   font-size: 2rem;
@@ -413,10 +473,10 @@ footer .container a {
   transition: color 0.3s ease;
 }
 footer .container a:hover {
-  color: #faad26;
+  color: #f1c40f;
 }
 footer .copy {
-  background-color: #faad26;
+  background-color: #f1c40f;
   color: black;
   text-align: center;
 }
