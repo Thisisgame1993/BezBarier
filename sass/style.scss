@@ -65,6 +65,17 @@ p {
 	background-color: $second-color;
 	color: $main-color;
 }
+/*Tryb Szarości*/
+.gray {
+	section,
+	footer {
+		filter: grayscale(100%);
+	}
+
+	img {
+		filter: grayscale(100%);
+	}
+}
 /*Niezbedne do ukrywania przycisku dostępności*/
 .hidden {
 	display: none;
@@ -101,37 +112,19 @@ p {
 		transition: 0.3s;
 		border: none;
 	}
-	.accessibility {
-		display: flex;
-		margin-left: auto;
-		padding: 0 1em;
-		button {
-			width: 2.2em;
-			height: 2.2em;
-			border: 1px dashed black;
-			font-size: 1.6em;
-			border-radius: 50%;
-			background: none;
-			margin-left: 0.5em;
-			transition: border 0.3s;
-		}
-		button:hover {
-			border: 1px solid $second-color;
-			color: $third-color;
-		}
-	}
 }
 #accessibilityMenu {
 	position: fixed;
 	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	z-index: 1000;
+	left: 20px;
+	z-index: 9999;
 }
 
 #accessibilityButton {
+	position: flex;
 	color: $main-color;
 	background-color: $third-color;
+	bottom: 150px;
 	border: none;
 	border-radius: 10%;
 	width: 50px;
@@ -144,19 +137,26 @@ p {
 #accessibilityButton:hover {
 	background-color: $four-color;
 }
-
 #accessibilityOptions {
-	position: absolute;
+	display: none;
+}
+#accessibilityButton.active + #accessibilityOptions {
+	display: flex;
+}
+#accessibilityOptions {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	top: 50px;
+	right: 20px;
 	width: 5em;
-	height: 10em;
+	height: 15em;
 	bottom: 120%;
 	left: 0%;
 	background-color: $four-color;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 999;
 }
 
 #accessibilityOptions button {

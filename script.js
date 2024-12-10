@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const navMenu = document.getElementById('nav-menu')
 	const increaseBtn = document.querySelector('.increase')
 	const contrastBtn = document.querySelector('.contrast')
+	const grayBtn = document.querySelector('.gray-color')
 	const searchField = document.querySelector('.search-field')
 	const searchButton = document.querySelector('.search')
 	const buttons = document.querySelectorAll('.btn-more')
@@ -245,5 +246,13 @@ document.querySelector('.contrast').addEventListener('click', function () {
 document.getElementById('accessibilityButton').addEventListener('click', function () {
 	const options = document.getElementById('accessibilityOptions')
 	// Toggle visibility of accessibility options
-	options.style.display = options.style.display === 'flex' ? 'none' : 'flex'
+	if (options.style.display === 'flex') {
+		options.style.display = 'none'
+	} else {
+		options.style.display = 'flex'
+	}
+})
+// Przełączanie klasy gray ba body
+document.querySelector('.gray-color').addEventListener('click', function () {
+	document.body.classList.toggle('gray')
 })
