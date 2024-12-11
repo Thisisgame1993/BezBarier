@@ -144,16 +144,12 @@ p {
   background-color: #4481eb;
 }
 
-#accessibilityOptions {
-  display: none;
-}
-
 #accessibilityButton.active + #accessibilityOptions {
   display: flex;
 }
 
 #accessibilityOptions {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
