@@ -213,7 +213,7 @@ nav {
   display: block;
   margin-left: auto;
 } /* Menu rozwijane - ukryte domyślnie */
-.down-navigation {
+.mobile-navigation {
   display: none; /* Menu jest ukryte domyślnie */
   position: absolute;
   top: 0;
@@ -227,7 +227,7 @@ nav {
   text-transform: uppercase;
 }
 
-.down-navigation.active {
+.mobile-navigation.active {
   display: block; /* Pokazuje menu po kliknięciu */
   transform: translateX(0); /* Menu wysuwa się z prawej strony */
 } /* Przycisk zamykający menu */
@@ -246,24 +246,24 @@ nav {
 .close-btn:hover {
   color: #f1c40f; /* Zmiana koloru przycisku przy najechaniu */
 } /* Lista elementów w menu */
-.down-navigation ul {
+.mobile-navigation ul {
   list-style-type: none;
   padding-top: 8em;
   margin: 0;
   text-align: center;
 }
 
-.down-navigation li {
+.mobile-navigation li {
   padding: 1.2em;
   font-size: 2rem;
 }
 
-.down-navigation li a {
+.mobile-navigation li a {
   color: black; /* Czarny tekst */
   text-decoration: none;
 }
 
-.down-navigation li a:hover {
+.mobile-navigation li a:hover {
   text-decoration: underline;
 }
 
@@ -452,8 +452,13 @@ footer .container .foot-box-right p {
   text-align: center;
   text-transform: uppercase;
 }
-footer .container .foot-box-right span {
-  padding: 0 0.5em;
+footer .container .foot-box-right ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+footer .container .form-heading {
+  color: #f1c40f;
 }
 footer .container .btn-send {
   display: flex;
@@ -511,7 +516,7 @@ footer .copy {
 @media (min-width: 1024px) {
   /* Ukryj burger button i rozwijane menu, pokaż nawigację desktopową */
   .burger-btn,
-  .down-navigation {
+  .mobile-navigation {
     display: none;
   }
   .mobile {

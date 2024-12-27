@@ -15,16 +15,23 @@
 <body>
     <nav>
         <div class="mobile">
-            <div class="logo">
+            <div class="logo"><!--Logo witryny Bez-Barier wraz z odnośnikiem do początku strony-->
                 <a href="#">
                     <img src="Images/logo.svg" alt="logo">
                 </a>
             </div>
-            <div class="burger-btn" id="burger-btn"><i class="fa-solid fa-bars"></i> </div>
+            <!--Przycisk odpowiadający za uruchomienie nawigacji dla urządzeń mobilnych-->
+            <div class="burger-btn" id="burger-btn" tabindex="0" role="button" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
 
-        <div id="nav-menu" class="down-navigation">
-            <div class="close-btn" id="close-btn"><i class="fa-solid fa-xmark"></i></div>
+        <div id="nav-menu" class="mobile-navigation"><!--Nawigacja dla urządzeń mobilnych-->
+
+            <!--Przycisk zamykający mobilną nawigacje-->
+            <div class="close-btn" id="close-btn" tabindex="0" role="button" aria-label="Zamknij menu">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
             <ul>
                 <li><a href="#">Strona Główna</a></li>
                 <li><a href="#about-us">O nas</a></li>
@@ -34,7 +41,7 @@
             </ul>
         </div>
 
-        <div class="desktop-nav">
+        <div class="desktop-nav"><!--Nawigacja dla desktopowych -->
             <ul>
                 <li><a href="#">Strona Główna</a></li>
                 <li><a href="#about-us">O nas</a></li>
@@ -44,18 +51,19 @@
             </ul>
         </div>
     </nav>
-
     <div class="search-box">
         <input class="search-field" type="text" placeholder=" Wyszukaj na stronie...">
         <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
+
+
 
     <section id="about-us" class="about-us">
         <h2>O nas</h2>
         <div class="section-container">
             <div class="container">
                 <img class="achieve-picture" src="Images/disabled2.jpg"
-                    alt="Dwóch niepełnosprawnych szpadzistów podczas pojedynku">
+                    alt="Dwóch niepełnosprawnych szpadzistów na wózkach inwalidzkich podczas pojedynku">
                 <div class="describe">
                     <h3>Kim jesteśmy</h3>
                     <p>Stowarzyszenie “Bez Barier” to organizacja non-profit, której misją jest wspieranie
@@ -124,81 +132,98 @@
         </div>
     </section>
 
-    <section id="galery" class="gallery">
-        <h2>Galeria</h2>
-        <div class="gallery-box">
-            <a href="Images/Gallery/1.jpg" data-fancybox="gallery"
-                data-caption="Nasza zawodniczka podczas turnieju w koszykówke na wózkach"><img
-                    src="Images/Gallery/1.jpg" alt="Uśmiechnięta zawodniczka podczas gry w koszykówke na wózkach"></a>
-            <a href="Images/Gallery/2.jpg" data-fancybox="gallery"
-                data-caption="Michał finiszuje na ostatnich metrach podczas Igrzysk Paraolimpijskich w RIO"><img
+    <section id="galery" class="gallery" aria-labelledby="gallery-heading" role="region">
+        <h2 id="gallery-heading">Galeria</h2>
+        <div class="gallery-box" role="list"> <a href="Images/Gallery/1.jpg" data-fancybox="gallery"
+                data-caption="Nasza zawodniczka podczas turnieju w koszykówke na wózkach"> <img
+                    src="Images/Gallery/1.jpg" alt="Uśmiechnięta zawodniczka podczas gry w koszykówke na wózkach"
+                    role="listitem"> </a> <a href="Images/Gallery/2.jpg" data-fancybox="gallery"
+                data-caption="Michał finiszuje na ostatnich metrach podczas Igrzysk Paraolimpijskich w RIO"> <img
                     src="Images/Gallery/2.jpg"
-                    alt="Jeden z naszych podopiecznych w trakcie biegu na Igrzyskach Paraolimpijskich w RIO 2016"></a>
-            <a href="Images/Gallery/3.jpg" data-fancybox="gallery"
-                data-caption="Wśród naszych podopiecznych są również utalentowani fotografowie"><img
-                    src="Images/Gallery/3.jpg" alt="Pani fotograf robiąca zdjęcia przyrody"></a>
-            <a href="Images/Gallery/4.jpg" data-fancybox="gallery"
-                data-caption="Maciej trenujący do kolejnego maratonu"><img src="Images/Gallery/4.jpg"
-                    alt="Nasz podpopieczny trenujący do maratonu na wózkach"></a>
-            <a href="Images/Gallery/5.jpg" data-fancybox="gallery"
-                data-caption="Po treningach spotkanie z przyjaciółmi na kawie"><img src="Images/Gallery/5.jpg"
-                    alt="Nasza wychowanka spędzająca wolny czas z przyjaciółką na kawie"></a>
-            <a href="Images/Gallery/6.jpg" data-fancybox="gallery"
-                data-caption="Zdjęcie naszej drużyny koszykarskiej"><img src="Images/Gallery/6.jpg"
-                    alt="Zdjęcie z zawodów koszykówki na wózkach mężczyzn"></a>
-            <a href="Images/Gallery/7.jpg" data-fancybox="gallery"
-                data-caption="Dbamy również o opiekę rehabilitacyjną naszych sportowców"><img src="Images/Gallery/7.jpg"
-                    alt="Rehabilitant podczas zajęć z zawodniczką"></a>
-            <a href="Images/Gallery/8.jpg" data-fancybox="gallery"
-                data-caption="Trening siłowy jest ważnym elementem każdego sportowca"><img src="Images/Gallery/8.jpg"
-                    alt="Podopieczny trenuje na siłowni"></a>
-            <a href="Images/Gallery/9.jpg" data-fancybox="gallery"
-                data-caption="Nasza placówka jest wyposażona w nowoczesne monitory Braille'owskie"><img
-                    src="Images/Gallery/9.jpg" alt="Braille'owski monitor dotykowy"></a>
-            <a href="Images/Gallery/10.jpg" data-fancybox="gallery" data-caption="Posiadamy także Tap Starpy"><img
-                    src="Images/Gallery/10.jpg" alt="Tap Strap"></a>
-            <a href="Images/Gallery/11.jpg" data-fancybox="gallery"
-                data-caption="Dzięki wsparciu naszych darczyńców możemy spełniać marzenia"><img
-                    src="Images/Gallery/11.jpg" alt="Zakładanie nowej protezy dla naszego podopiecznego"></a>
-            <a href="Images/Gallery/12.jpg" data-fancybox="gallery"
-                data-caption="To jeden z naszych psów 'Drops' wyszkolony na psa przewodnika"><img
-                    src="Images/Gallery/12.jpg" alt="Spacer z jednym psem przewodnikem"></a>
-        </div>
+                    alt="Jeden z naszych podopiecznych w trakcie biegu na Igrzyskach Paraolimpijskich w RIO 2016"
+                    role="listitem"> </a> <a href="Images/Gallery/3.jpg" data-fancybox="gallery"
+                data-caption="Wśród naszych podopiecznych są również utalentowani fotografowie"> <img
+                    src="Images/Gallery/3.jpg" alt="Pani fotograf robiąca zdjęcia przyrody" role="listitem"> </a> <a
+                href="Images/Gallery/4.jpg" data-fancybox="gallery"
+                data-caption="Maciej trenujący do kolejnego maratonu"> <img src="Images/Gallery/4.jpg"
+                    alt="Nasz podpopieczny trenujący do maratonu na wózkach" role="listitem"> </a> <a
+                href="Images/Gallery/5.jpg" data-fancybox="gallery"
+                data-caption="Po treningach spotkanie z przyjaciółmi na kawie"> <img src="Images/Gallery/5.jpg"
+                    alt="Nasza wychowanka spędzająca wolny czas z przyjaciółką na kawie" role="listitem"> </a> <a
+                href="Images/Gallery/6.jpg" data-fancybox="gallery" data-caption="Zdjęcie naszej drużyny koszykarskiej">
+                <img src="Images/Gallery/6.jpg" alt="Zdjęcie z zawodów koszykówki na wózkach mężczyzn" role="listitem">
+            </a> <a href="Images/Gallery/7.jpg" data-fancybox="gallery"
+                data-caption="Dbamy również o opiekę rehabilitacyjną naszych sportowców"> <img
+                    src="Images/Gallery/7.jpg" alt="Rehabilitant podczas zajęć z zawodniczką" role="listitem"> </a> <a
+                href="Images/Gallery/8.jpg" data-fancybox="gallery"
+                data-caption="Trening siłowy jest ważnym elementem każdego sportowca"> <img src="Images/Gallery/8.jpg"
+                    alt="Podopieczny trenuje na siłowni" role="listitem"> </a> <a href="Images/Gallery/9.jpg"
+                data-fancybox="gallery"
+                data-caption="Nasza placówka jest wyposażona w nowoczesne monitory Braille'owskie"> <img
+                    src="Images/Gallery/9.jpg" alt="Braille'owski monitor dotykowy" role="listitem"> </a> <a
+                href="Images/Gallery/10.jpg" data-fancybox="gallery" data-caption="Posiadamy także Tap Starpy"> <img
+                    src="Images/Gallery/10.jpg" alt="Tap Strap" role="listitem"> </a> <a href="Images/Gallery/11.jpg"
+                data-fancybox="gallery" data-caption="Dzięki wsparciu naszych darczyńców możemy spełniać marzenia"> <img
+                    src="Images/Gallery/11.jpg" alt="Zakładanie nowej protezy dla naszego podopiecznego"
+                    role="listitem"> </a> <a href="Images/Gallery/12.jpg" data-fancybox="gallery"
+                data-caption="To jeden z naszych psów 'Drops' wyszkolony na psa przewodnika"> <img
+                    src="Images/Gallery/12.jpg" alt="Spacer z jednym psem przewodnikem" role="listitem"> </a> </div>
     </section>
-
     <footer id="contact" class="contact">
         <h2>Kontakt</h2>
         <div class="container">
             <div class="foot-box-left">
                 <div class="form">
-                    <form action="send_email.php" method="POST">
+                    <form action="send_email.php" method="POST" aria-labelledby="form-heading">
+                        <h3 id="form-heading" class="form-heading">Formularz kontaktowy</h3>
                         <div class="box">
-                            <label for="Name">Imię</label>
-                            <input id="name" type="text" name="name">
+                            <label for="name">Imię</label>
+                            <input id="name" type="text" name="name" aria-required="true" aria-label="Podaj swoje imię">
                         </div>
                         <div class="box">
                             <label for="Name">e-mail</label>
-                            <input id="email" type="email" name="email">
+                            <input id="email" type="email" name="email" aria-required="true"
+                                aria-label="Podaj swój adres e-mail">
                             <label for="Name">Treść wiadomości</label>
                         </div>
                         <div class="box">
-                            <textarea name="message" id="" cols="80" rows="10"></textarea>
+                            <textarea name="message" id="" cols="80" rows="10" aria-required="true"
+                                aria-label="Wpisz treść wiadomości">  </textarea>
                         </div>
                         <button class="btn-send btn btn-warning" type="submit">Wyślij wiadomość</button>
                     </form>
-
                 </div>
             </div>
             <div class="foot-box-right">
                 <h3>Adres</h3>
-                <p>ul. Zaciszańska 32</p>
-                <p>42-200 Częstochowa</p>
-                <p> <span><i class="fa-solid fa-phone"></i></span>+48 665 221 333</p>
-                <p><span><i class="fa-solid fa-envelope"></i></span>bez-barier@gmail.com</p>
-                <h3>Media</h3>
-                <a href="#" class="media"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="#" class="media"><i class="fa-brands fa-square-twitter"></i></a>
-                <a href="#" class="media"><i class="fa-brands fa-linkedin"></i></a>
+                <address aria-label="Adres kontaktowy">
+                    <p>ul. Zaciszańska 32</p>
+                    <p>42-200 Częstochowa</p>
+                    <p>
+                        <span aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
+                        <span aria-label="Telefon">+48 665 221 333</span>
+                    </p>
+                    <p>
+                        <span aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+                        <span aria-label="E-mail">bez-barier@gmail.com</span>
+                    </p>
+                </address>
+                <ul aria-label="Linki do mediów społecznościowych">
+                    <li>
+                        <a href="#" class="media" aria-label="Odwiedź nas na Facebooku">
+                            <i class="fa-brands fa-square-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="media" aria-label="Odwiedź nas na Twitterze">
+                            <i class="fa-brands fa-square-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li> <a href="#" class="media" aria-label="Odwiedź nas na LinkedIn">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        </a></li>
+                </ul>
+
             </div>
         </div>
         <div class="copy">
