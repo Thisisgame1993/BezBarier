@@ -52,8 +52,11 @@
         </div>
     </nav>
     <div class="search-box">
-        <input class="search-field" type="text" placeholder=" Wyszukaj na stronie...">
-        <button class="search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input class="search-field" type="text" placeholder=" Wyszukaj na stronie..." aria-label="Pole wyszukiwania"
+            title="Pole wyszukiwania">
+        <button class="search"><i class="fa-solid fa-magnifying-glass" aria-label="Przycisk wyszukaj">
+                <title>Wyszukaj</title>
+            </i></button>
     </div>
 
 
@@ -230,7 +233,7 @@
             &copy; <span id="footerYear"></span> Stowarzyszenie Bez Granic. Wszelkie Prawa Zastrzeżone
         </div>
     </footer>
-    <div id="accessibilityMenu">
+    <div id="accessibilityMenu" aria-label="Dodatkowe funkcje dostępności" title="Przycisk dostępności">
         <button id="accessibilityButton" class="no-gray">
             <i class="fa-solid fa-wheelchair"></i>
         </button>
