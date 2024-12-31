@@ -277,4 +277,27 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.querySelector('.gray-color').addEventListener('click', function () {
 		document.body.classList.toggle('gray')
 	})
+	// Funkcja do zamknięcia alertu
+	function closeAlert() {
+		document.getElementById('alert').style.display = 'none'
+	}
+
+	// Nasłuchiwanie na kliknięcie przycisku "OK" w alercie
+	document.getElementById('closeAlert').addEventListener('click', closeAlert)
+
+	// Sprawdzenie, czy w URL jest parametr 'status' i wyświetlenie alertu
+	window.onload = function () {
+		const urlParams = new URLSearchParams(window.location.search)
+		const status = urlParams.get('status') // Sprawdzamy parametr 'status'
+
+		if (status === 'success') {
+			document.getElementById('alertMessage').textContent = 'Wiadomość została pomyślnie wysłana!'
+			document.getElementById('alert').classList.add('success')
+			document.getElementById('alert').style.display = 'block'
+		} else if (status === 'error') {
+			document.getElementById('alertMessage').textContent = 'Wszystkie pola muszą być wypełnione!'
+			document.getElementById('alert').classList.add('error')
+			document.getElementById('alert').style.display = 'block'
+		}
+	}
 })

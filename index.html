@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stowarzyszenie Bez Barier</title>
+    <meta name="description" content="Strona Stowarzyszenia dla niepełnosprawnych sportowców">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css" />
@@ -15,13 +16,17 @@
 <body>
     <nav>
         <div class="mobile">
+
             <div class="logo"><!--Logo witryny Bez-Barier wraz z odnośnikiem do początku strony-->
-                <a href="#">
-                    <img src="Images/logo.svg" alt="Obraz przedstawia logo Stowarzyszenia Bez-Barier ">
-                </a>
+                <h1>
+                    <a href="#">
+                        <img src="Images/logo.svg" alt="Obraz przedstawia logo Stowarzyszenia Bez-Barier ">
+                    </a>
+                </h1>
             </div>
             <!--Przycisk odpowiadający za uruchomienie nawigacji dla urządzeń mobilnych-->
-            <div class="burger-btn" id="burger-btn" tabindex="0" role="button" aria-expanded="false">
+            <div class="burger-btn" id="burger-btn" tabindex="0" role="button" aria-label="Otwórz menu"
+                aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
@@ -41,7 +46,7 @@
             </ul>
         </div>
 
-        <div class="desktop-nav"><!--Nawigacja dla desktopowych -->
+        <div class="desktop-nav"><!--Nawigacja dla urządzeń desktopowych -->
             <ul>
                 <li><a href="#">Strona Główna</a></li>
                 <li><a href="#about-us">O nas</a></li>
@@ -51,147 +56,162 @@
             </ul>
         </div>
     </nav>
-    <div class="search-box">
-        <input class="search-field" type="text" placeholder=" Wyszukaj na stronie..." aria-label="Pole wyszukiwania"
-            title="Pole wyszukiwania">
-        <button class="search"><i class="fa-solid fa-magnifying-glass" aria-label="Przycisk wyszukaj">
-            </i></button>
-    </div>
+    <main>
+        <div class="search-box">
+            <input class="search-field" type="text" placeholder="Wyszukaj na stronie..." aria-label="Pole wyszukiwania"
+                title="Pole wyszukiwania">
+            <button class="search" aria-label="Szukaj">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
 
 
 
-    <section id="about-us" class="about-us">
-        <h2>O nas</h2>
-        <div class="section-container">
-            <div class="container">
-                <img class="achieve-picture" src="Images/disabled2.jpg"
-                    alt="Dwóch niepełnosprawnych szpadzistów na wózkach inwalidzkich podczas pojedynku">
-                <div class="describe">
-                    <h3>Kim jesteśmy</h3>
-                    <p>Stowarzyszenie “Bez Barier” to organizacja non-profit, której misją jest wspieranie
-                        niepełnosprawnych sportowców w osiąganiu ich pełnego potencjału. Już od 10 lat niesiemy pomoc i
-                        wsparcie, a nasze działania zaowocowały licznymi osiągnięciami. Z dumą patrzymy na sukcesy
-                        naszych podopiecznych, które potwierdzają wartość naszej pracy i zaangażowania
-                    </p>
+        <section id="about-us" class="about-us">
+            <h2>O nas</h2>
+            <div class="section-container">
+                <div class="container">
+                    <img class="about-us" src="Images/disabled2.webp"
+                        alt="Dwóch niepełnosprawnych szpadzistów na wózkach inwalidzkich podczas pojedynku">
+                    <div class="describe">
+                        <h3>Kim jesteśmy</h3>
+                        <p>Stowarzyszenie “Bez Barier” to organizacja non-profit, której misją jest wspieranie
+                            niepełnosprawnych sportowców w osiąganiu ich pełnego potencjału. Już od 10 lat niesiemy
+                            pomoc i
+                            wsparcie, a nasze działania zaowocowały licznymi osiągnięciami. Z dumą patrzymy na sukcesy
+                            naszych podopiecznych, które potwierdzają wartość naszej pracy i zaangażowania
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <script src="https://kit.fontawesome.com/4b58f93b4a.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/4b58f93b4a.js" crossorigin="anonymous"></script>
 
-    <section id="achieve" class="achieve">
-        <h2>Nasze osiągnięcia</h2>
-        <div class="section-container">
-            <div class="container">
-                <div class="box">
-                    <div class="describe">
-                        <h3>Zawody lekkoatletyczne dla niepełnosprawnych</h3>
-                        <p class="short-text">Jesteśmy organizatorami corocznych zawodów lekkoatletycznych dla osób
-                            niepełnosprawnych,
-                            które przyciągają niesamowitych sportowców z całej Polski.</p>
-                        <p class="long-text">W naszych zawodach lekkoatletycznych dla osób niepełnosprawnych bierze
-                            udział coraz większa liczba uczestników z całej Polski. To wyjątkowe wydarzenie, które
-                            promuje pasję do sportu i wspiera rozwój talentów. Co roku sportowcy mają okazję zmierzyć
-                            się w różnych dyscyplinach, a dla wielu z nich są to zawody, które wyznaczają początek
-                            dalszej kariery. Organizowane z myślą o integracji, rywalizacji i wsparciu, nasze zawody są
-                            symbolem siły woli, determinacji i dążenia do celu.</p>
-                        <button class="btn-more btn btn-warning">Kliknij aby przeczytać więcej...</button>
+        <section id="achieve" class="achieve">
+            <h2>Nasze osiągnięcia</h2>
+            <div class="section-container">
+                <div class="container">
+                    <div class="box">
+                        <div class="describe">
+                            <h3>Zawody lekkoatletyczne dla niepełnosprawnych</h3>
+                            <p class="short-text">Jesteśmy organizatorami corocznych zawodów lekkoatletycznych dla osób
+                                niepełnosprawnych,
+                                które przyciągają niesamowitych sportowców z całej Polski.</p>
+                            <p class="long-text">W naszych zawodach lekkoatletycznych dla osób niepełnosprawnych bierze
+                                udział coraz większa liczba uczestników z całej Polski. To wyjątkowe wydarzenie, które
+                                promuje pasję do sportu i wspiera rozwój talentów. Co roku sportowcy mają okazję
+                                zmierzyć
+                                się w różnych dyscyplinach, a dla wielu z nich są to zawody, które wyznaczają początek
+                                dalszej kariery. Organizowane z myślą o integracji, rywalizacji i wsparciu, nasze zawody
+                                są
+                                symbolem siły woli, determinacji i dążenia do celu.</p>
+                            <button class="btn-more btn btn-warning">Kliknij aby przeczytać więcej...</button>
+                        </div>
+                        <img src="Images/disabled3.webp" alt="Wyścig niepełnosprawnych sportowców">
                     </div>
-                    <img src="Images/disabled3.jpg" alt="Wyścig niepełnosprawnych sportowców">
-                </div>
-                <div class="box">
-                    <div class="describe">
-                        <h3>Nowoczesna siłownia</h3>
-                        <p class="short-text">Dzięki wsparciu naszych sponsorów udało nam się wybudować nowoczesną
-                            siłownię dla osób
-                            niepełnosprawnych, dzięki której nasi sportowcy mogą trenować za darmo. </p>
-                        <p class="long-text">To wyjątkowe miejsce, które pozwala naszym sportowcom
-                            na efektywne treningi w komfortowych warunkach. Siłownia jest dostępna za darmo, co daje
-                            wszystkim chętnym możliwość doskonalenia swoich umiejętności i przygotowań do zawodów. To
-                            krok ku jeszcze większej integracji i równym szansom w sporcie, niezależnie od wyzwań, które
-                            stawiają przed nami codzienne życie.</p>
-                        <button class="btn-more btn btn-warning">Kliknij aby przeczytać więcej...</button>
+                    <div class="box">
+                        <div class="describe">
+                            <h3>Nowoczesna siłownia</h3>
+                            <p class="short-text">Dzięki wsparciu naszych sponsorów udało nam się wybudować nowoczesną
+                                siłownię dla osób
+                                niepełnosprawnych, dzięki której nasi sportowcy mogą trenować za darmo. </p>
+                            <p class="long-text">To wyjątkowe miejsce, które pozwala naszym sportowcom
+                                na efektywne treningi w komfortowych warunkach. Siłownia jest dostępna za darmo, co daje
+                                wszystkim chętnym możliwość doskonalenia swoich umiejętności i przygotowań do zawodów.
+                                To
+                                krok ku jeszcze większej integracji i równym szansom w sporcie, niezależnie od wyzwań,
+                                które
+                                stawiają przed nami codzienne życie.</p>
+                            <button class="btn-more btn btn-warning">Kliknij aby przeczytać więcej...</button>
+                        </div>
+                        <img src="Images/disabled4.webp" alt="Nowoczesna siłownia">
                     </div>
-                    <img src="Images/disabled4.jpg" alt="Nowoczesna siłownia">
-                </div>
-                <div class="box">
-                    <div class="describe">
-                        <h3>Wspieramy zawodowo</h3>
-                        <p class="short-text">Nasze stowarzyszenie z dumą wspiera osoby niepełnosprawne w ich drodze do
-                            samodzielności i
-                            aktywności zawodowej. Dzięki naszym staraniom i wsparciu sponsorów, tworzymy i organizujemy
-                            miejsca pracy dostosowane do potrzeb i możliwości osób z niepełnosprawnościami. </p>
-                        <p class="long-text">Pomagamy w zdobywaniu nowych umiejętności poprzez szkolenia i warsztaty
-                            oraz oferujemy doradztwo zawodowe. Chcemy, aby osoby niepełnosprawne miały równe szanse na
-                            rynku pracy i mogły realizować swoje zawodowe marzenia. Wspólnie z pracodawcami budujemy
-                            miejsce, w którym każdy ma szansę na rozwój.</p>
-                        <button class="btn-more btn btn-warning">Kliknij aby przeczytać więcej...</button>
+                    <div class="box">
+                        <div class="describe">
+                            <h3>Wspieramy zawodowo</h3>
+                            <p class="short-text">Nasze stowarzyszenie z dumą wspiera osoby niepełnosprawne w ich drodze
+                                do
+                                samodzielności i
+                                aktywności zawodowej. Dzięki naszym staraniom i wsparciu sponsorów, tworzymy i
+                                organizujemy
+                                miejsca pracy dostosowane do potrzeb i możliwości osób z niepełnosprawnościami. </p>
+                            <p class="long-text">Pomagamy w zdobywaniu nowych umiejętności poprzez szkolenia i warsztaty
+                                oraz oferujemy doradztwo zawodowe. Chcemy, aby osoby niepełnosprawne miały równe szanse
+                                na
+                                rynku pracy i mogły realizować swoje zawodowe marzenia. Wspólnie z pracodawcami budujemy
+                                miejsce, w którym każdy ma szansę na rozwój.</p>
+                            <button class="btn-more btn btn-warning">Kliknij aby przeczytać więcej...</button>
+                        </div>
+                        <img src="Images/disabled5.webp" alt="Niepełnosprawna osoba pracująca przy biurku">
                     </div>
-                    <img src="Images/disabled5.jpg" alt="Niepełnosprawna osoba pracująca przy biurku">
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="galery" class="gallery" aria-labelledby="gallery-heading" role="region">
-        <h2 id="gallery-heading">Galeria</h2>
-        <div class="gallery-box" role="list"> <a href="Images/Gallery/1.jpg" data-fancybox="gallery"
-                data-caption="Nasza zawodniczka podczas turnieju w koszykówke na wózkach"> <img
-                    src="Images/Gallery/1.jpg" alt="Uśmiechnięta zawodniczka podczas gry w koszykówke na wózkach"> </a>
-            <a href="Images/Gallery/2.jpg" data-fancybox="gallery"
-                data-caption="Michał finiszuje na ostatnich metrach podczas Igrzysk Paraolimpijskich w RIO"> <img
-                    src="Images/Gallery/2.jpg"
-                    alt="Jeden z naszych podopiecznych w trakcie biegu na Igrzyskach Paraolimpijskich w RIO 2016"> </a>
-            <a href="Images/Gallery/3.jpg" data-fancybox="gallery"
-                data-caption="Wśród naszych podopiecznych są również utalentowani fotografowie"> <img
-                    src="Images/Gallery/3.jpg" alt="Pani fotograf robiąca zdjęcia przyrody"> </a> <a
-                href="Images/Gallery/4.jpg" data-fancybox="gallery"
-                data-caption="Maciej trenujący do kolejnego maratonu"> <img src="Images/Gallery/4.jpg"
-                    alt="Nasz podpopieczny trenujący do maratonu na wózkach"> </a> <a href="Images/Gallery/5.jpg"
-                data-fancybox="gallery" data-caption="Po treningach spotkanie z przyjaciółmi na kawie"> <img
-                    src="Images/Gallery/5.jpg" alt="Nasza wychowanka spędzająca wolny czas z przyjaciółką na kawie">
-            </a> <a href="Images/Gallery/6.jpg" data-fancybox="gallery"
-                data-caption="Zdjęcie naszej drużyny koszykarskiej">
-                <img src="Images/Gallery/6.jpg" alt="Zdjęcie z zawodów koszykówki na wózkach mężczyzn">
-            </a> <a href="Images/Gallery/7.jpg" data-fancybox="gallery"
-                data-caption="Dbamy również o opiekę rehabilitacyjną naszych sportowców"> <img
-                    src="Images/Gallery/7.jpg" alt="Rehabilitant podczas zajęć z zawodniczką"> </a> <a
-                href="Images/Gallery/8.jpg" data-fancybox="gallery"
-                data-caption="Trening siłowy jest ważnym elementem każdego sportowca"> <img src="Images/Gallery/8.jpg"
-                    alt="Podopieczny trenuje na siłowni"> </a> <a href="Images/Gallery/9.jpg" data-fancybox="gallery"
-                data-caption="Nasza placówka jest wyposażona w nowoczesne monitory Braille'owskie"> <img
-                    src="Images/Gallery/9.jpg" alt="Braille'owski monitor dotykowy"> </a> <a
-                href="Images/Gallery/10.jpg" data-fancybox="gallery" data-caption="Posiadamy także Tap Starpy"> <img
-                    src="Images/Gallery/10.jpg" alt="Tap Strap"> </a> <a href="Images/Gallery/11.jpg"
-                data-fancybox="gallery" data-caption="Dzięki wsparciu naszych darczyńców możemy spełniać marzenia"> <img
-                    src="Images/Gallery/11.jpg" alt="Zakładanie nowej protezy dla naszego podopiecznego"> </a> <a
-                href="Images/Gallery/12.jpg" data-fancybox="gallery"
-                data-caption="To jeden z naszych psów 'Drops' wyszkolony na psa przewodnika"> <img
-                    src="Images/Gallery/12.jpg" alt="Spacer z jednym psem przewodnikem"> </a>
-        </div>
-    </section>
+        <section id="galery" class="gallery" aria-labelledby="gallery-heading" role="region">
+            <h2 id="gallery-heading">Galeria</h2>
+            <div class="gallery-box" role="group"> <a href="Images/Gallery/1.webp" data-fancybox="gallery"
+                    data-caption="Nasza zawodniczka podczas turnieju w koszykówke na wózkach"> <img
+                        src="Images/Gallery/1.webp" alt="Uśmiechnięta zawodniczka podczas gry w koszykówke na wózkach">
+                </a>
+                <a href="Images/Gallery/2.webp" data-fancybox="gallery"
+                    data-caption="Michał finiszuje na ostatnich metrach podczas Igrzysk Paraolimpijskich w RIO"> <img
+                        src="Images/Gallery/2.webp"
+                        alt="Jeden z naszych podopiecznych w trakcie biegu na Igrzyskach Paraolimpijskich w RIO 2016">
+                </a>
+                <a href="Images/Gallery/3.webp" data-fancybox="gallery"
+                    data-caption="Wśród naszych podopiecznych są również utalentowani fotografowie"> <img
+                        src="Images/Gallery/3.webp" alt="Pani fotograf robiąca zdjęcia przyrody"> </a> <a
+                    href="Images/Gallery/4.webp" data-fancybox="gallery"
+                    data-caption="Maciej trenujący do kolejnego maratonu"> <img src="Images/Gallery/4.webp"
+                        alt="Nasz podpopieczny trenujący do maratonu na wózkach"> </a> <a href="Images/Gallery/5.webp"
+                    data-fancybox="gallery" data-caption="Po treningach spotkanie z przyjaciółmi na kawie"> <img
+                        src="Images/Gallery/5.webp"
+                        alt="Nasza wychowanka spędzająca wolny czas z przyjaciółką na kawie">
+                </a> <a href="Images/Gallery/6.webp" data-fancybox="gallery"
+                    data-caption="Zdjęcie naszej drużyny koszykarskiej">
+                    <img src="Images/Gallery/6.webp" alt="Zdjęcie z zawodów koszykówki na wózkach mężczyzn">
+                </a> <a href="Images/Gallery/7.webp" data-fancybox="gallery"
+                    data-caption="Dbamy również o opiekę rehabilitacyjną naszych sportowców"> <img
+                        src="Images/Gallery/7.webp" alt="Rehabilitant podczas zajęć z zawodniczką"> </a> <a
+                    href="Images/Gallery/8.we" data-fancybox="gallery"
+                    data-caption="Trening siłowy jest ważnym elementem każdego sportowca"> <img
+                        src="Images/Gallery/8.webp" alt="Podopieczny trenuje na siłowni"> </a> <a
+                    href="Images/Gallery/9.webp" data-fancybox="gallery"
+                    data-caption="Nasza placówka jest wyposażona w nowoczesne monitory Braille'owskie"> <img
+                        src="Images/Gallery/9.webp" alt="Braille'owski monitor dotykowy"> </a> <a
+                    href="Images/Gallery/10.webp" data-fancybox="gallery" data-caption="Posiadamy także Tap Starpy">
+                    <img src="Images/Gallery/10.webp" alt="Tap Strap"> </a> <a href="Images/Gallery/11.webp"
+                    data-fancybox="gallery" data-caption="Dzięki wsparciu naszych darczyńców możemy spełniać marzenia">
+                    <img src="Images/Gallery/11.webp" alt="Zakładanie nowej protezy dla naszego podopiecznego"> </a> <a
+                    href="Images/Gallery/12.webp" data-fancybox="gallery"
+                    data-caption="To jeden z naszych psów 'Drops' wyszkolony na psa przewodnika"> <img
+                        src="Images/Gallery/12.webp" alt="Spacer z jednym psem przewodnikem"> </a>
+            </div>
+        </section>
+    </main>
     <footer id="contact" class="contact">
         <h2>Kontakt</h2>
         <div class="container">
             <div class="foot-box-left">
                 <div class="form">
-                    <form action="send_email.php" method="POST" aria-labelledby="form-heading">
+                    <form id="contactForm" action="send_email.php" method="POST" aria-labelledby="form-heading">
                         <h3 id="form-heading" class="form-heading">Formularz kontaktowy</h3>
                         <div class="box">
                             <label for="name">Imię</label>
-                            <input id="name" type="text" name="name" aria-required="true" aria-label="Podaj swoje imię">
-
+                            <input id="name" type="text" name="name" aria-required="true" aria-label="Podaj swoje imię"
+                                required>
                         </div>
                         <div class="box">
                             <label for="email">e-mail</label>
                             <input id="email" type="email" name="email" aria-required="true"
-                                aria-label="Podaj swój adres e-mail">
+                                aria-label="Podaj swój adres e-mail" required>
                         </div>
                         <div class="box">
                             <label for="message">Treść wiadomości</label>
                             <textarea name="message" id="message" cols="80" rows="10" aria-required="true"
-                                aria-label="Wpisz treść wiadomości"></textarea>
+                                aria-label="Wpisz treść wiadomości" required></textarea>
                         </div>
                         <button class="btn-send btn btn-warning" type="submit">Wyślij wiadomość</button>
                     </form>
@@ -199,6 +219,9 @@
             </div>
             <div class="foot-box-right">
                 <h3>Adres</h3>
+                <div id="alertBox"></div>
+
+
                 <address aria-label="Adres kontaktowy">
                     <p>ul. Zaciszańska 32</p>
                     <p>42-200 Częstochowa</p>
@@ -233,25 +256,27 @@
             &copy; <span id="footerYear"></span> Stowarzyszenie Bez Granic. Wszelkie Prawa Zastrzeżone
         </div>
     </footer>
-    <div id="accessibilityMenu" aria-label="Dodatkowe funkcje dostępności" title="Przycisk dostępności">
-        <button id="accessibilityButton" class="no-gray">
-            <i class="fa-solid fa-wheelchair"></i>
-        </button>
-        <div id="accessibilityOptions">
-            <button class="contrast" title="Wysoki kontrast">
-                <i class="fa-solid fa-circle-half-stroke"></i>
+    <aside>
+        <div id="accessibilityMenu" aria-label="Dodatkowe funkcje dostępności" title="Przycisk dostępności">
+            <button id="accessibilityButton" class="no-gray" aria-label="Ustawienia dostępności">
+                <i class="fa-brands fa-accessible-icon"></i>
             </button>
-            <button class="increase" title="Powiększ czcionkę">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-            </button>
-            <button class="gray-color" title="Wyłączenie kolorystyki">
-                <i class="fa-solid fa-droplet"></i>
-            </button>
+            <div id="accessibilityOptions">
+                <button class="contrast" title="Wysoki kontrast" aria-label="Zwiększ kontrast">
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                <button class="increase" title="Powiększ czcionkę" aria-label="Powiększ czcionkę">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </button>
+                <button class="gray-color" title="Wyłączenie kolorystyki" aria-label="Tryb szarości">
+                    <i class="fa-solid fa-droplet"></i>
+                </button>
+            </div>
         </div>
-    </div>
-    <button id="backToTopBtn" class="back-to-top no-gray">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+        <button id="backToTopBtn" class="back-to-top no-gray" aria-label="Wróć na górę strony">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </aside>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
@@ -259,6 +284,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
     <script src="script.js"></script>
+    <div id="alertBox" class="alert-box"></div>
 </body>
+
 
 </html>
